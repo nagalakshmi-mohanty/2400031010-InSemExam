@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Portal</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="container">
     <h1>Welcome to the Student Portal</h1>
-    <p>Click the button below to log in as <b>student1</b>.</p>
-    <button class="btn" onclick="login('student1', 'abc123')">Login</button>
+    <p>Enter your username and password to log in.</p>
+
+    <input type="text" id="username" placeholder="Username (hint: student1)" /><br><br>
+    <input type="password" id="password" placeholder="Password (hint: 123456)" /><br><br>
+    <button class="btn" onclick="handleLogin()">Login</button>
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=4"></script>
 </body>
+
 </html>

@@ -1,17 +1,15 @@
-function login(username, password) {
-  const users = [
-    { username: "student1", password: "123456" },
-    { username: "student2", password: "abcdef" },
-  ];
+function handleLogin() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
 
-  const found = users.find(
-    (user) => user.username === username && user.password === password
-  );
-
-  if (found) {
-    console.log(` Welcome ${username}! You have successfully logged in.`);
+  if (username === "student1" && password === "123456") {
+    document.body.innerHTML = `
+      <div style="text-align:center; margin-top:100px;">
+        <h1 style="color: green;">✅ Login Successful!</h1>
+        <p>Welcome, ${username}!</p>
+      </div>
+    `;
   } else {
-    console.log(" Invalid username or password. Please try again.");
+    alert("❌ Invalid username or password. Please try again.");
   }
 }
-login("student1", "123456");
